@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/*
+ * AeroLink design tokens — see docs/DECISIONS.md (D1).
+ * Off-white base, forest primary, neutral borders, restrained status colors.
+ */
+@theme {
+  --color-background: #f6f5f1;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #ecedE7;
+  --color-accent-subtle: #e5ebe4;
+
+  --color-foreground: #252923;
+  --color-muted: #777a73;
+
+  --color-forest: #526b58;
+  --color-forest-dark: #425847;
+  --color-forest-light: #6d8573;
+
+  --color-link: #2f5f8f;
+
+  --color-border: #e6e5df;
+  --color-border-strong: #d4d3cb;
+
+  --color-success: #487c5a;
+  --color-success-bg: #e8f2eb;
+  --color-warning: #c48b3a;
+  --color-warning-bg: #f8efe0;
+  --color-critical: #c6534b;
+  --color-critical-bg: #f7e9e7;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --shadow-card: 0 1px 2px 0 rgb(37 41 35 / 0.04);
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus ring — consistent, accessible, restrained */
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background-color: var(--color-accent-subtle);
+}
